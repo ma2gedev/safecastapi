@@ -99,7 +99,7 @@ module DeviceStoriesHelper # rubocop:disable Metrics/ModuleLength
           if sensor_value then sensor_exists = true end
           hash_sensor.merge!(date => sensor_value)
         end
-        if sensor_exists then sensor_type_hashes.push({ "name": sensor, "data": hash_sensor }) end
+        if sensor_exists then sensor_type_hashes.push({ name: sensor, data: hash_sensor }) end
       end
       all_hashes.merge!(sensor_names.key(sensor_type) => sensor_type_hashes)
     end
